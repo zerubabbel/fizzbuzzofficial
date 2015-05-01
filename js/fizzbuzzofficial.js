@@ -1,23 +1,19 @@
 $(document).ready(function(){
-var enterNumber = prompt("Enter a Number");
-var maxValue = + enterNumber;
-var fizzBuzzFunc = function(){
-	for(var i = 1; i <= maxValue ; i++){
-		if(i % 15 === 0){
-	document.write("Fizz Buzz ");
+var inputNumber= prompt ("***input a number***");
+var max = + inputNumber;
+var fizzBuzz = function () {
+for (var i=1; i<=max; i++){
+	if (i%15===0){
+		document.write("fizzbuzz");
 	}
-		else if(i % 3 === 0){
-	document.write("Fizz ");
-	}
-		else if(i % 5 === 0){
-	document.write("Buzz ");
-	}
-		else{
-	document.write(" " + i + " ");
+	else if (i%3===0){document.write("fizz");}
+	else if (i%5===0){document.write("buzz");}
+	else{document.write(i);
 	}
 }
+if(isNaN(max)){prompt("enter only a whole number");
+}
 };
-
-
-$("#numbers").append(fizzBuzzFunc());
+$("#data").append(fizzBuzz());
 });
+
